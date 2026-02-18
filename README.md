@@ -105,11 +105,27 @@ Este proyecto está licenciado bajo la **MIT License**. Consulta el archivo [LIC
 
 ## Créditos
 
-Desarrollado por Alex Provencio para [SaberIP.es](https://saberip.es)
+**Desarrollado con la ayuda de Mistral Vibe** 🤖✨
 
-📧 Contacto: [conexionsin@gmail.com](mailto:conexionsin@gmail.com)
+Este proyecto fue creado por [Alex Provencio](https://github.com/alexprovencio) para [SaberIP.es](https://saberip.es) con la asistencia de [Mistral Vibe](https://mistral.ai) - un agente de codificación CLI avanzado.
 
-🌟 ¿Te gustó este proyecto? ¡Déjame una estrella en GitHub! [⭐ Star on GitHub](https://github.com/alexprovencio/saberipes)
+📧 **Contacto:** [conexionsin@gmail.com](mailto:conexionsin@gmail.com)
+
+🌟 **¿Te gustó este proyecto?** ¡Déjame una estrella en GitHub! [⭐ Star on GitHub](https://github.com/alexprovencio/saberipes)
+
+### Tecnologías Utilizadas
+
+- **Frontend:** HTML5, CSS3, JavaScript Vanilla
+- **API:** [ipify.org](https://api.ipify.org) para obtener direcciones IP
+- **Diseño:** Gradientes CSS, animaciones suaves, diseño responsive
+- **Seguridad:** Content Security Policy, headers de seguridad
+- **Desarrollo:** Asistido por Mistral Vibe (agente de codificación AI)
+
+### Agradecimientos
+
+- A [Mistral AI](https://mistral.ai) por proporcionar la tecnología de inteligencia artificial
+- A [ipify](https://www.ipify.org/) por su API gratuita de direcciones IP
+- A la comunidad de código abierto por las herramientas y recursos
 
 ## Hosted on GitHub
 
