@@ -1,140 +1,137 @@
-# SaberIP.es - Tu Dirección IP Pública
+# SaberIP.es - Your Public IP Address
 
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/alexprovencio/saberipes)
 [![License](https://img.shields.io/badge/License-MIT-green)](https://opensource.org/licenses/MIT)
 
-Una página web simple, responsive y de diseño ligero que muestra la dirección IP del usuario.
+A simple, responsive, and lightweight webpage that displays the user's public IP address.
 
-**📧 Contacto:** [conexionsin@gmail.com](mailto:conexionsin@gmail.com)
+**📧 Contact:** [conexionsin@gmail.com](mailto:conexionsin@gmail.com)
 
-**🌐 Sitio web:** [https://saberip.es](https://saberip.es)
+**🌐 Website:** [https://saberip.es](https://saberip.es)
 
-**💻 Código fuente:** [https://github.com/alexprovencio/saberipes](https://github.com/alexprovencio/saberipes)
+**💻 Source Code:** [https://github.com/alexprovencio/saberipes](https://github.com/alexprovencio/saberipes)
 
-## Características
+---
 
-- **Diseño moderno y responsive**: Funciona perfectamente en móviles, tablets y escritorio
-- **Interfaz en español**: Totalmente traducido al español
-- **Copiado fácil**: Haz clic en la IP o en el botón para copiar al portapapeles
-- **Confirmación visual**: Notificación emergente cuando se copia la IP
-- **Diseño ligero**: Carga rápida sin dependencias externas
-- **Visualmente atractivo**: Gradientes suaves y animaciones sutiles
-- **Favicon personalizado**: Icono de navegador con branding de SaberIP.es
-- **Seguridad mejorada**: 
-  - Advertencia visual si no se usa HTTPS
-  - Headers de seguridad en meta tags
-  - Content Security Policy para protección
-- **HTTPS requerido**: Advertencia clara cuando la página no se sirve mediante HTTPS
+## Features
 
-## Estructura del proyecto
+- **Modern Responsive Design**: Works perfectly on mobile, tablet, and desktop
+- **Spanish Interface**: Fully translated to Spanish
+- **Easy Copy**: Click the IP or button to copy to clipboard
+- **Visual Feedback**: Toast notification when IP is copied
+- **Lightweight**: Fast loading with no external dependencies
+- **Visually Appealing**: Smooth gradients and subtle animations
+- **Custom Favicon**: Browser icon with SaberIP.es branding
+- **Enhanced Security**:
+  - Visual warning if not using HTTPS
+  - Security headers in meta tags
+  - Content Security Policy for protection
+- **HTTPS Required**: Clear warning when page is not served via HTTPS
 
-- `index.html`: Página principal con HTML, CSS y JavaScript integrados
-- `server.py`: Servidor Python simple para pruebas locales
+---
 
-## Cómo usar
+## Project Structure
 
-### Para desarrollo local:
+- `index.html`: Main webpage with integrated HTML, CSS, and JavaScript
+- `LICENSE`: MIT License file
+- `README.md`: Complete documentation
 
-1. Clona este repositorio o descarga los archivos
-2. Navega al directorio del proyecto
-3. Ejecuta el servidor Python:
+---
+
+## How to Use
+
+### For Local Development:
+
+1. Clone this repository or download the files
+2. Navigate to the project directory
+3. Start a local server:
    ```bash
-   python3 server.py
+   python3 -m http.server 8000
    ```
-4. Abre tu navegador en: http://localhost:8000
+4. Open your browser at: http://localhost:8000
 
-### Para probar la funcionalidad de copiado:
+### To Test Copy Functionality:
 
-1. Haz clic en el botón "Copiar IP" o directamente en la dirección IP mostrada
-2. Deberías ver:
-   - El botón cambiar a "✓ ¡Copiado!" temporalmente
-   - Una notificación emergente en la parte inferior que dice "IP copiada al portapapeles"
-   - La dirección IP copiada en tu portapapeles
-3. Puedes pegar la IP en cualquier campo de texto para verificar
-4. También hay un botón de prueba que copia "127.0.0.1" para testing rápido
+1. Click on:
+   - The displayed IP address (when it appears)
+   - The "Copiar IP" button
+2. You should see:
+   - The button changes to "✓ ¡Copiado!" for 2 seconds
+   - A black toast notification appears at the bottom
+   - The IP address copied to your clipboard (paste to verify)
+3. You can paste the IP in any text field to verify it was copied
 
-**Nota:** Algunos navegadores pueden requerir que la página se sirva mediante HTTPS para que el API de portapapeles funcione correctamente.
+**Note:** Some browsers may require the page to be served via HTTPS for the clipboard API to work properly.
 
-### Para producción:
+---
 
-1. Sube el archivo `index.html` a tu servidor web
-2. Configura tu dominio (saberip.es) para apuntar a este archivo
-3. Asegúrate de tener HTTPS configurado para seguridad
+## Security
 
-## Tecnologías utilizadas
+The page includes several security measures:
 
-- HTML5
-- CSS3 con gradientes y animaciones
-- JavaScript vanilla (sin frameworks)
-- API pública de ipify.org para obtener la IP
-- Diseño responsive con media queries
+- **HTTPS Detection**: Shows visual warning if page is not served via HTTPS
+- **Content Security Policy**: Restricts script, style, and connection sources to prevent attacks
+- **Security Headers**: Includes headers like X-Content-Type-Options, X-Frame-Options, and Referrer-Policy
+- **Privacy**: No user data is stored, IP is only shown to the current user
 
-## Personalización
+---
 
-Puedes personalizar fácilmente:
-- **Colores**: Modifica los valores en los gradientes CSS
-- **Texto**: Edita el contenido en español en el HTML
-- **Fuentes**: Cambia la familia de fuentes en el CSS
+## Notes
 
-## Seguridad
+- The page uses the free ipify.org API to get the public IP address
+- No user data is stored
+- Designed to be fast and accessible
+- **Important**: For production, make sure to serve the page via HTTPS
 
-La página incluye varias medidas de seguridad:
+## Production Requirements
 
-- **HTTPS Detection**: Muestra una advertencia visual si la página no se sirve mediante HTTPS
-- **Content Security Policy**: Restringe las fuentes de scripts, estilos y conexiones para prevenir ataques
-- **Security Headers**: Incluye headers como X-Content-Type-Options, X-Frame-Options y Referrer-Policy
-- **Privacidad**: No se almacenan datos de usuarios, la IP solo se muestra al usuario actual
+1. Set up HTTPS with a valid SSL certificate
+2. Configure the domain saberip.es to point to your server
+3. Ensure all resources are loaded via HTTPS
+4. Consider adding additional security headers on your web server
 
-## Notas
+---
 
-- La página utiliza la API gratuita de ipify.org para obtener la dirección IP
-- No se almacenan datos de los usuarios
-- Diseñado para ser rápido y accesible
-- **Importante**: Para producción, asegúrate de servir la página mediante HTTPS
+## License
 
-## Requisitos para Producción
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 
-1. Configurar HTTPS con un certificado SSL válido
-2. Configurar el dominio saberip.es para apuntar a tu servidor
-3. Asegurarse de que todos los recursos se cargan mediante HTTPS
-4. Considerar añadir headers de seguridad adicionales en el servidor web
+---
 
-## Licencia
+## Credits
 
-Este proyecto está licenciado bajo la **MIT License**. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+**Developed with the help of Mistral Vibe** 🤖✨
 
-## Créditos
+This project was created by [Alex Provencio](https://github.com/alexprovencio) for [SaberIP.es](https://saberip.es) with assistance from [Mistral Vibe](https://mistral.ai) - an advanced CLI coding agent.
 
-**Desarrollado con la ayuda de Mistral Vibe** 🤖✨
+📧 **Contact:** [conexionsin@gmail.com](mailto:conexionsin@gmail.com)
 
-Este proyecto fue creado por [Alex Provencio](https://github.com/alexprovencio) para [SaberIP.es](https://saberip.es) con la asistencia de [Mistral Vibe](https://mistral.ai) - un agente de codificación CLI avanzado.
+🌟 **Like this project?** Give it a star on GitHub! [⭐ Star on GitHub](https://github.com/alexprovencio/saberipes)
 
-📧 **Contacto:** [conexionsin@gmail.com](mailto:conexionsin@gmail.com)
+### Technologies Used
 
-🌟 **¿Te gustó este proyecto?** ¡Déjame una estrella en GitHub! [⭐ Star on GitHub](https://github.com/alexprovencio/saberipes)
+- **Frontend:** HTML5, CSS3, Vanilla JavaScript
+- **API:** [ipify.org](https://api.ipify.org) for getting public IP addresses
+- **Design:** CSS gradients, smooth animations, responsive design
+- **Security:** Content Security Policy, security headers
+- **Development:** Assisted by Mistral Vibe (AI coding agent)
 
-### Tecnologías Utilizadas
+### Acknowledgments
 
-- **Frontend:** HTML5, CSS3, JavaScript Vanilla
-- **API:** [ipify.org](https://api.ipify.org) para obtener direcciones IP
-- **Diseño:** Gradientes CSS, animaciones suaves, diseño responsive
-- **Seguridad:** Content Security Policy, headers de seguridad
-- **Desarrollo:** Asistido por Mistral Vibe (agente de codificación AI)
+- To [Mistral AI](https://mistral.ai) for providing the artificial intelligence technology
+- To [ipify](https://www.ipify.org/) for their free public IP API
+- To the open source community for tools and resources
 
-### Agradecimientos
-
-- A [Mistral AI](https://mistral.ai) por proporcionar la tecnología de inteligencia artificial
-- A [ipify](https://www.ipify.org/) por su API gratuita de direcciones IP
-- A la comunidad de código abierto por las herramientas y recursos
+---
 
 ## Hosted on GitHub
 
 🔗 [https://github.com/alexprovencio/saberipes](https://github.com/alexprovencio/saberipes)
 
-Este proyecto está alojado en GitHub. Puedes:
-- 🐛 Reportar problemas (issues)
-- 📝 Sugerir mejoras
-- 🍴 Hacer fork y contribuir
-- ⭐ Dar una estrella si te gusta
+This project is hosted on GitHub. You can:
+- 🐛 Report issues
+- 📝 Suggest improvements
+- 🍴 Fork and contribute
+- ⭐ Give it a star if you like it
 
-¡Contribuciones son bienvenidas! 🚀
+Contributions are welcome! 🚀
